@@ -9,22 +9,23 @@ import {
 } from "@mui/material/styles";
 
 // import TacckFont from '../../fonts/tacckfont.woff2';
+import "./TacckFont.css";
 
 const TacckFontTheme = createTheme({
-  typography: {
-    fontFamily: 'TacckFont',
-  },
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: `
-        @font-face {
-          font-family: 'TacckFont';
-          font-style: normal;
-          src: url("../../fonts/tacckfont.woff2") format('woff2');
-        }
-      `,
-    },
-  },
+  // typography: {
+  //   fontFamily: 'TacckFont',
+  // },
+  // components: {
+  //   MuiCssBaseline: {
+  //     styleOverrides: `
+  //       @font-face {
+  //         font-family: 'TacckFont';
+  //         font-style: normal;
+  //         src: url("../../fonts/tacckfont.woff2") format('woff2');
+  //       }
+  //     `,
+  //   },
+  // },
   palette: {
     primary: {
       main: "#4B5F65",
@@ -78,7 +79,7 @@ const Title = (): JSX.Element => (
     <Stack justifyContent="center" alignItems="center">
       <MuiThemeProvider theme={TacckFontTheme}>
         <Typography variant="h1">
-            <TitleStyle>Tacck Work</TitleStyle>
+          <TitleStyle className="tacck-font">Tacck Work</TitleStyle>
         </Typography>
       </MuiThemeProvider>
     </Stack>
