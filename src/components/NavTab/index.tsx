@@ -22,7 +22,13 @@ const links = [
   },
 ]
 
-const NavButton = ({ pathName, href, label }): JSX.Element => {
+type Props = {
+  pathName: string;
+  href: string;
+  label: string;
+}
+
+const NavButton = ({ pathName, href, label }: Props): JSX.Element => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
 
@@ -56,7 +62,7 @@ type Params = {
 }
 
 const NavTab = ({pathName}: Params): JSX.Element => {
-  const tabItems = () => links.map((item) => <NavButton pathName={pathName} href={item.href} label={item.label} />);
+  const tabItems = () => links.map((item) => <NavButton key={item.label} pathName={pathName} href={item.href} label={item.label} />);
 
   return (
     <Stack direction="row" sx={{
