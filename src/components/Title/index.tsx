@@ -78,9 +78,7 @@ const Title = (): JSX.Element => (
   >
     <Stack justifyContent="center" alignItems="center">
       <MuiThemeProvider theme={TacckFontTheme}>
-        <Typography variant="h1">
-          <TitleStyle className="tacck-font">Tacck Work</TitleStyle>
-        </Typography>
+        <TitleStyle className="tacck-font">Tacck Work</TitleStyle>
       </MuiThemeProvider>
     </Stack>
   </Stack>
