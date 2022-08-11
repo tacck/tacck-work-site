@@ -54,7 +54,8 @@ const NavButton = ({ pathName, href, label }: Props): JSX.Element => {
     ...baseSx,
   }
 
-  return <Button variant="text"  href={href} sx={pathName === href ? selectedSx : unSelectedSx} >{label}</Button>
+  const regularPathName = pathName.length > 1 ? pathName.substring(0, pathName.length - 1) : pathName;
+  return <Button variant="text"  href={href} sx={regularPathName === href ? selectedSx : unSelectedSx} >{label}</Button>;
 }
 
 type Params = {
