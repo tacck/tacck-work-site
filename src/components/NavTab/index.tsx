@@ -1,5 +1,7 @@
 import React from "react";
 
+import { navigate } from 'gatsby';
+
 import { Button, Stack, Box } from "@mui/material";
 
 import { useTheme } from '@mui/material/styles';
@@ -7,7 +9,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 // import { useConfig } from "gatsby-theme-advanced";
 
-import BaseLink from "../Link";
+// import BaseLink from "../Link";
 
 const links = [
   {
@@ -31,6 +33,10 @@ type Props = {
 const NavButton = ({ pathName, href, label }: Props): JSX.Element => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const handlerClick = (event) => {
+    // console.log(event)
+    navigate(event.target.value);
+  }
 
   const baseSx = {
     width: matches ? "140px" : "100px",
@@ -55,7 +61,7 @@ const NavButton = ({ pathName, href, label }: Props): JSX.Element => {
   }
 
   const regularPathName = pathName.length > 1 ? pathName.substring(0, pathName.length - 1) : pathName;
-  return <Button variant="text"  href={href} sx={regularPathName === href ? selectedSx : unSelectedSx} >{label}</Button>;
+  return <Button variant="text" sx={regularPathName === href ? selectedSx : unSelectedSx} value={href} onClick={handlerClick}>{label}</Button>;
 }
 
 type Params = {
