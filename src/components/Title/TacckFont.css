@@ -1,9 +1,11 @@
-.tacck-font {
-    font-family: 'TacckFont'
-}
-
 @font-face {
     font-family: 'TacckFont';
     font-style: normal;
-    src: url("../../fonts/tacckfont.woff2") format('woff2');
+    font-display: swap;
+    src: url("/fonts/tacckfont.woff2") format('woff2');
+}
+
+.tacck-font {
+    font-family: 'TacckFont';
+    font-style: normal;
 }

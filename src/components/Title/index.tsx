@@ -8,7 +8,7 @@ import {
   styled
 } from "@mui/material/styles";
 
-// import TacckFont from '../../fonts/tacckfont.woff2';
+// import TacckFont from '../../../static/fonts/tacckfont.woff2';
 import "./TacckFont.css";
 
 const TacckFontTheme = createTheme({
@@ -21,7 +21,8 @@ const TacckFontTheme = createTheme({
   //       @font-face {
   //         font-family: 'TacckFont';
   //         font-style: normal;
-  //         src: url("../../fonts/tacckfont.woff2") format('woff2');
+  //         font-display: swap;
+  //         src: url("../../../static/fonts/tacckfont.ttf") format('ttf');
   //       }
   //     `,
   //   },
