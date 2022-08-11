@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'TacckFont';
     font-style: normal;
-    font-display: swap;
+    font-display: block;
     src: url("/fonts/tacckfont.woff2") format('woff2');
 }
 
