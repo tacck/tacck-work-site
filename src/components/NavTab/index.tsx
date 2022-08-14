@@ -61,7 +61,7 @@ const NavButton = ({ pathName, href, label }: Props): JSX.Element => {
   }
 
   const regularPathName = pathName.length > 1 && pathName.match(/\/$/) ? pathName.substring(0, pathName.length - 1) : pathName;
-  console.log(pathName, regularPathName, href);
+  // console.log(pathName, regularPathName, href);
 
   return <Button variant="text" sx={regularPathName === href ? selectedSx : unSelectedSx} value={href} onClick={handlerClick}>{label}</Button>;
 }
