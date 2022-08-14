@@ -8,8 +8,8 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 import Layout from "../layouts";
 
-import MeImage from "../images/tacck_2019_200x200.jpg";
-import CbImage from "../images/Community_Builder_badge_200px.png";
+import MeImage from "../images/tacck_2019_200x200.webp";
+import CbImage from "../images/Community_Builder_badge_200px.webp";
 
 const SideImage = styled('div')(
   ({theme}) => ({
