@@ -10,8 +10,10 @@ import { Helmet } from "react-helmet";
 import Title from "../components/Title";
 import Footer from "../components/Footer";
 import NavTab from "../components/NavTab";
-// import Navigation from "../components/Navigation";
+import GtagDialog from "../components/GtagDialog";
+
 import ThemeProvider from "../theme";
+
 
 type MainLayoutProps = {
   pageTitle: string;
@@ -19,17 +21,12 @@ type MainLayoutProps = {
   children?: React.ReactNode;
 };
 
-// const consent = () => {
-//   localStorage.setItem(GTAG_OPTIN_KEY, true)
-//   if (typeof window.loadGtag == "function") {
-//     window.loadGtag()
-//   }
-// }
-
 const MainLayout = ({ pageTitle, pathName, children }: MainLayoutProps): JSX.Element => (
   <ThemeProvider>
     {/* <SEO /> */}
     <Helmet title={`${pageTitle} | Tacck Work`} />
+    <GtagDialog></GtagDialog>
+
     <Box
       sx={{
         minHeight: "100vh",
