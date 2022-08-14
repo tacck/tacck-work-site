@@ -60,7 +60,10 @@ const NavButton = ({ pathName, href, label }: Props): JSX.Element => {
     ...baseSx,
   }
 
-  return <Button variant="text" sx={pathName === href ? selectedSx : unSelectedSx} value={href} onClick={handlerClick}>{label}</Button>;
+  const regularPathName = pathName.length > 1 && pathName.match(/\/$/) ? pathName.substring(0, pathName.length - 1) : pathName;
+  console.log(pathName, regularPathName, href);
+
+  return <Button variant="text" sx={regularPathName === href ? selectedSx : unSelectedSx} value={href} onClick={handlerClick}>{label}</Button>;
 }
 
 type Params = {
