@@ -3,8 +3,6 @@ import * as React from "react";
 import { Box } from "@mui/material";
 import { Helmet } from "react-helmet";
 
-// import { GTAG_OPTIN_KEY } from "gatsby-plugin-google-gtag-optin" // Or use your own if you changed it in the config
-
 // import { SEO } from "gatsby-theme-advanced";
 
 import Title from "../components/Title";
