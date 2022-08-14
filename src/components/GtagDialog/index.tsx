@@ -39,15 +39,15 @@ const GtagDialog = (): JSX.Element => {
   return (
     <>
       <Helmet>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM57VZVBB4"></script>
-        <script>{`
+      <script defer src="https://www.googletagmanager.com/gtag/js?id=G-DM57VZVBB4"></script>
+        <script defer>{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', 'G-DM57VZVBB4');
         `}</script>
-        <script>
+        <script defer>
           const optInValue = localStorage.getItem('gtag_optin_key');
           const trackIgnored = optInValue !== "true";
           window['ga-disable-G-DM57VZVBB4'] = trackIgnored;
